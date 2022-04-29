@@ -17,7 +17,13 @@
     "type": "git",
     "url": "git+https://github.com/adamjarling/openseadragon-fabricjs-overlay.git"
   },
-  "files": [],
+  "files": [
+    "fabric/*",
+    "openseadragon-fabricjs-overlay.js",
+    "index.js",
+    "openseadragon/*"
+
+  ],
   "keywords": [
     "openseadragon",
     "plugin",
