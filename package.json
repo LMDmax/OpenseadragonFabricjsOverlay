@@ -4,14 +4,27 @@
   "description": "An OpenSeadragon plugin that adds fabricjs canvas overlay capability.",
   "main": "index.js",
   "dependencies": {
+    "babel-loader": "^8.2.5",
+    "jsdom": "^19.0.0",
     "openseadragon": "^2.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-node-externals": "^3.0.0",
+    "@babel/core": "^7.17.8",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7"
+  },
   "peerDependencies": {
     "openseadragon": "^2.0.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build",
+    "build": "webpack --mode production",
+    "babel-build": "./node_modules/.bin/babel src/ -d dist/"
   },
   "repository": {
     "type": "git",
@@ -22,7 +35,6 @@
     "openseadragon-fabricjs-overlay.js",
     "index.js",
     "openseadragon/*"
-
   ],
   "keywords": [
     "openseadragon",
